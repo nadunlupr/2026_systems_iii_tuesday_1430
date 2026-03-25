@@ -18,12 +18,19 @@ export default function Counter() {
     // const setCount = arr[1];
 
     const handleClick = () => {
- 
-        const newState = {
-            ...state, 
-            counter: state.counter + 1
-        }
-        setState(newState);        
+        const obj = {state};
+        const normalObj = {state: state}
+        const spreadObj = {...state};
+
+        console.log('obj:', obj);
+        console.log('normalObj: ', normalObj);
+        console.log('spreadObj: ', spreadObj);
+
+        // const newState = {
+        //     ...state, 
+        //     counter: state.counter + 1
+        // }
+        // setState(newState);        
     }
 
     return (

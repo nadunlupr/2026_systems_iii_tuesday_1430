@@ -34,6 +34,11 @@ function App() {
   return (
     <>
       <Link to="/counter">Go to Counter</Link>
+      <br/>
+      <Link to="/promise-demo">Go to Promise demo</Link>
+      <br/>
+      <Link to="/product-list">Go to fetch products</Link>
+      <br/>
       <input type='text'
         onChange={({ target: { value } }) => setState({ ...state, searchText: value })} />
       {

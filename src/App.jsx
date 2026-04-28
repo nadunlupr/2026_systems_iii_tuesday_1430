@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import GroupCard from './groups/group-card'
 import { Link } from 'react-router'
+import TopLayout from './nav-bar/TopLayout'
 
 function App() {
   const initialState = {
@@ -31,8 +32,14 @@ function App() {
     )
   }
 
+  const user = {
+    name: 'Denis'
+  }
+
   return (
     <>
+      <TopLayout user={user} />
+      
       <Link to="/counter">Go to Counter</Link>
       <br/>
       <Link to="/promise-demo">Go to Promise demo</Link>

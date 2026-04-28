@@ -27,11 +27,22 @@ export default function PromiseDemo(prop) {
         callThePromise();
     }, []);
 
+    const handleClick = () => {
+        setCount(count + 1)
+
+        console.log('count1', count);
+        setCount((prevCount) => {
+            console.log('count3', prevCount);
+            return prevCount + 1;
+        });
+        console.log('count2', count);
+    }
+
     console.log('rendering...');
     return (
         <div>
             <h1>Handling promises - in console</h1>
-            <button onClick={() => setCount(count + 1)} >Count</button>
+            <button onClick={() => handleClick()} >Count</button>
             <p>Count {count}</p>
         </div>
     )
